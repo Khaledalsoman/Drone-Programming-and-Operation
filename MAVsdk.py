@@ -32,19 +32,19 @@ async def run():
     print(f"Flight altitude is: {flying_alt}")
 
     print("going to target 1 location...")
-    await drone.action.goto_location(absolute_altitude+10 * 1e-5,absolute_longitude +10 * 1e-5,flying_alt,0)
+    await drone.action.goto_location(absolute_latitude+10 * 1e-5,absolute_longitude,flying_alt,0)
     await asyncio.sleep(10)
 
     print("going to target 2 location...")
-    await drone.action.goto_location(absolute_altitude+10 * 1e-5,absolute_longitude +10 * 1e-5,flying_alt,0)
+    await drone.action.goto_location(absolute_latitude+10 * 1e-5,absolute_longitude +10 * 1e-5,flying_alt,0)
     await asyncio.sleep(10)
 
     print("going to target 3 location...")
-    await drone.action.goto_location(absolute_altitude+10 * 1e-5,absolute_longitude +10 * 1e-5,flying_alt,0)
+    await drone.action.goto_location(absolute_latitude,absolute_longitude +10 * 1e-5,flying_alt,0)
     await asyncio.sleep(10)
 
     print("going to target 4 location...")
-    await drone.action.goto_location(absolute_altitude+10 * 1e-5,absolute_longitude +10 * 1e-5,flying_alt,0)
+    await drone.action.goto_location(absolute_latitude,absolute_longitude,flying_alt,0)
     await asyncio.sleep(10)
     
     print('landing...')
